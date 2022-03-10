@@ -43,14 +43,11 @@ if (document.getElementsByClassName('rradio').length != 0) { //radio excer
 			];
 			if (QandA[i][1] == rColumnSplit[j][0]) {
 				rColumn[i].setAttribute('ref', rColumnSplit[j][1]);
-				console.log('je moeders string')
-
 			}
 		}
 	}
-	document.getElementById('btn_controleer').removeAttribute('disabled');
-	setTimeout(document.getElementById('btn_controleer').click(), 1000);
-	setTimeout(document.getElementById('btn_volgende').click(), 1000);
+	console.log('kijk nog even na');
+	$('#gfeedback').fadeIn();
 } else {
 	$('#gfeedback').fadeIn();
 }
