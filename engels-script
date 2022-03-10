@@ -1,0 +1,56 @@
+if (document.getElementsByClassName('rradio').length != 0) { //radio excer
+	var innerText = document.getElementById('gfeedback').innerText;
+	var choises = document.getElementsByClassName('optionbox');
+	for (let i = 1; i <= choises.length; i++) {
+		var box = document.getElementById('box' + i.toString()).querySelector('input');
+		console.log(box)
+		if (innerText.includes('Answer ' + String.fromCharCode(i + 64))) {
+			box.click();
+		}
+	}
+	document.getElementById('btn_controleer').removeAttribute('disabled');
+	setTimeout(document.getElementById('btn_controleer').click(), 1000);
+	setTimeout(document.getElementById('btn_volgende').click(), 1000);
+} else if (document.getElementsByClassName('ch_label').length != 0) {
+	var innerText = document.getElementById('gfeedback').innerText;
+	var choises = document.getElementsByClassName('optionbox');
+	for (let i = 1; i <= choises.length; i++) {
+		var box = document.getElementById('box' + i.toString());
+		if (innerText.slice(0, 25).includes(' ' + String.fromCharCode(i + 64))) {
+			box.click();
+		}
+	}
+	document.getElementById('btn_controleer').removeAttribute('disabled');
+	setTimeout(document.getElementById('btn_controleer').click(), 1000);
+	setTimeout(document.getElementById('btn_volgende').click(), 1000);
+} else if (document.getElementsByClassName('answer30').length != 0) {
+	document.getElementById('btn_controleer').removeAttribute('disabled');
+	document.getElementById('btn_controleer').removeAttribute('disabled');
+	setTimeout(document.getElementById('btn_controleer').click(), 1000);
+	setTimeout(document.getElementById('btn_volgende').click(), 1000);
+} else if (document.getElementsByClassName('rcol').length != 0) { //column excersize
+	var lColumn = document.getElementsByClassName('rrowa'); // gets left column
+	var rColumn = document.getElementsByClassName('rrow rsort ui-draggable ui-droppable'); //gets right column
+	var QandA = document.getElementById('gfeedback').innerText.split('\n').splice(document.getElementById('gfeedback').innerText.split('\n').length - lColumn.length, lColumn.length);
+	var rColumnSplit = new Array(rColumn.length);
+	for (var i = 0; i < QandA.length; i++) {
+		QandA[i] = QandA[i].split(' – '); // splits with question on [0] and answer on [1]
+		QandA[i] = QandA[i][0].split(' | ');
+		for (var j = 0; j < rColumnSplit.length; j++) {
+			rColumnSplit[j] = [ //splits rColumn with Q on [0] ref on [1]
+				rColumn[j].querySelector('div, span').innerText,
+				rColumn[j].getAttribute('ref')
+			];
+			if (QandA[i][1] == rColumnSplit[j][0]) {
+				rColumn[i].setAttribute('ref', rColumnSplit[j][1]);
+				console.log('je moeders string')
+
+			}
+		}
+	}
+	document.getElementById('btn_controleer').removeAttribute('disabled');
+	setTimeout(document.getElementById('btn_controleer').click(), 1000);
+	setTimeout(document.getElementById('btn_volgende').click(), 1000);
+} else {
+	$('#gfeedback').fadeIn();
+}
