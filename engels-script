@@ -16,7 +16,7 @@ if (document.getElementsByClassName('rradio').length != 0) { //radio excer
 	var choises = document.getElementsByClassName('optionbox');
 	for (let i = 1; i <= choises.length; i++) {
 		var box = document.getElementById('box' + i.toString());
-		if (innerText.slice(0, 25).includes(' ' + String.fromCharCode(i + 64))) {
+		if (innerText.slice(0, 50).includes(' ' + String.fromCharCode(i + 64))) {
 			box.click();
 		}
 	}
