@@ -16,6 +16,5 @@ Maak een hier issue aan of stuur mij een [E-mail](mailto:leslmosnk+gpsscript@out
 
 Zorg dat je een screenshot en de opdracht url meegeeft. Anders kan ik het probleem niet oplossen!
 
-
-Deze cheat is geïnspireerd op de voorganger, [gps-cheater-script](https://github.com/leslmosnk/gps-cheater-script)
 # RPOPS NAAR SANDERBRILMAN VAN SANDERBRILMAN.NL
+[sanderbrilman.nl](https://sanderbrilman.nl/)
