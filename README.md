@@ -1,5 +1,3 @@
-# RPOPS NAAR SANDERBRILMAN VAN SANDERBRILMAN.NL
-
 # Cheat voor GPS taal en rekenen
 Deze cheat is de verbeterde versie van de eerder uitgebrachte gps-cheater-script (Beter bekend als Lester Cheat)
 
